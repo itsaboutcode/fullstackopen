@@ -1,4 +1,3 @@
-import { useState } from "react";
 import StateProject from "./StateProject";
 
 const App = () => {
@@ -8,5 +7,4 @@ const App = () => {
     </>
   );
 };
-
 export default App;
