@@ -3,9 +3,9 @@
 
 ## [Exercise Submission System](https://studies.cs.helsinki.fi/stats/courses/fullstackopen)
 
-## Javascript for ReactJS
-
 ## ReactJS 
+
+## Javascript for ReactJS
 
 ### Arrow Function
 
