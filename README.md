@@ -1,9 +1,6 @@
-# [FullStackOpen](https://fullstackopen.com/en/)
+# [ReactJS](https://reactjs.org/)
 
-
-## [Exercise Submission System](https://studies.cs.helsinki.fi/stats/courses/fullstackopen)
-
-## [ReactJS](https://reactjs.org/)
+### What's ReactJS
 
 ReactJS is a library to make UI. Nothing more!
 
@@ -22,7 +19,7 @@ npm start
 By default, the application runs in localhost port 3000 with the address http://localhost:3000.
 
 
-## Javascript for ReactJS
+# Javascript for ReactJS
 
 ### Arrow Function
 
@@ -63,8 +60,14 @@ const multiply = (x*y) =>  return x*y
 
 # References
 
+### ReactJS
+
+- [FullStackOpen - The University of Helsinki](https://fullstackopen.com/en/)
+- [FullStackOpen Exercise Submission System](https://studies.cs.helsinki.fi/stats/courses/fullstackopen)
+
 ### Arrow Functions
 
-- https://www.youtube.com/watch?v=22fyYvxz-do
+- [Arrow Functions]https://www.youtube.com/watch?v=22fyYvxz-do
+
 
 
