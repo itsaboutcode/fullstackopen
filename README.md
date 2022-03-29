@@ -10,6 +10,18 @@ ReactJS is a library to make UI. Nothing more!
 ![ZDM7pgZQ](https://user-images.githubusercontent.com/204423/160538410-7313d36c-bf31-45d4-a909-1c654418f6ac.png)
 
 
+### Creating ReactJS Project
+
+```
+
+npx create-react-app my-app
+cd my-app
+npm start
+```
+
+By default, the application runs in localhost port 3000 with the address http://localhost:3000.
+
+
 ## Javascript for ReactJS
 
 ### Arrow Function
