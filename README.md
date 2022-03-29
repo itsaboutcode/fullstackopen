@@ -3,7 +3,12 @@
 
 ## [Exercise Submission System](https://studies.cs.helsinki.fi/stats/courses/fullstackopen)
 
-## ReactJS 
+## ReactJS
+
+ReactJS is a library to make UI. Nothing more!
+
+![ZDM7pgZQ](https://user-images.githubusercontent.com/204423/160538410-7313d36c-bf31-45d4-a909-1c654418f6ac.png)
+
 
 ## Javascript for ReactJS
 
