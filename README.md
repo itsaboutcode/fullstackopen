@@ -67,7 +67,7 @@ const multiply = (x*y) =>  return x*y
 
 ### Arrow Functions
 
-- [Arrow Functions]https://www.youtube.com/watch?v=22fyYvxz-do
+- [Arrow Functions](https://www.youtube.com/watch?v=22fyYvxz-do)
 
 
 
