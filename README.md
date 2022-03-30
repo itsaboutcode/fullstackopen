@@ -64,6 +64,9 @@ const multiply = (x*y) =>  return x*y
 
 - [FullStackOpen - The University of Helsinki](https://fullstackopen.com/en/)
 - [FullStackOpen Exercise Submission System](https://studies.cs.helsinki.fi/stats/courses/fullstackopen)
+- [Clever Programmer](https://www.youtube.com/c/CleverProgrammer)
+- [freeCodeCamp.org](https://www.youtube.com/c/Freecodecamp/search?query=reactjs)
+- [Coding Addict](https://www.youtube.com/codingaddict)
 
 ### Arrow Functions
 
