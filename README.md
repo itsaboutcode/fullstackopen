@@ -1,22 +1,95 @@
 # [ReactJS](https://reactjs.org/)
 
-### What's ReactJS
+## What's ReactJS
 
 ReactJS is a library to make UI. Nothing more!
 
 ![ZDM7pgZQ](https://user-images.githubusercontent.com/204423/160538410-7313d36c-bf31-45d4-a909-1c654418f6ac.png)
 
 
-### Creating ReactJS Project
+## Creating ReactJS Project
 
-```
-
+```bash
 npx create-react-app my-app
 cd my-app
 npm start
 ```
 
 By default, the application runs in localhost port 3000 with the address http://localhost:3000.
+
+
+## React Component and Props
+
+### What's React Component
+
+- Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. 
+- Components are like JavaScript functions.
+- They accept arbitrary inputs (called “**props**”) and return React elements describing what should appear on the screen.
+
+### Creating React Component
+
+- We call such components **“function components”** because they are literally JavaScript functions.
+
+```js
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+
+**Arrow Function Component Syntax**
+
+```js
+const Welcome = props => <h1>Hello, {props.name}</h1>
+```
+
+**[ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) class Syntax**
+
+```js
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+
+### React Component Rules
+
+1. Component mames must start with a capital letter. 
+> React treats components starting with lowercase letters as DOM tags. For example, `<div />` represents an HTML div tag, but `<Welcome />` represents a component
+
+2. Always close the tag for React components e.g;
+
+```
+<Welcome>OR</Welcome>
+<Welcome /> 
+
+```
+
+3. Use `camelCase` for html attributes.
+
+```
+<Welcome onClick="" />
+```
+
+4. Use `className` attribute instead of `class` for css classes.
+
+```
+<Welcome className="" />
+```
+
+5. Component must have a root element. It can be a `div` or [Fragment](https://reactjs.org/docs/fragments.html) `<>`
+
+
+### Stateless Functional Components
+
+### Stateful Components
+
+### JSX
+
+
+
+### Render Dynamic Content Inside Component
+
 
 
 # Javascript for ReactJS
