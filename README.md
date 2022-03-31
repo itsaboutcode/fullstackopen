@@ -90,6 +90,53 @@ class Welcome extends React.Component {
 
 ### Render Dynamic Content Inside Component
 
+## [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+
+Before learning about hooks, make sure you understand the concept of [Destructing Assignment Syntax](destructuring_assignment)
+
+- Hooks are a new addition in React **16.8**.
+- They let you use state and other React features without writing a class.
+- Hooks are functions that let you **“hook into”** React **state** and **lifecycle** features from function components.
+
+- React provides a few built-in Hooks like **useState**. 
+- You can also create your own Hooks to reuse stateful behavior between different components.
+
+
+### [Rules of Hooks](https://reactjs.org/docs/hooks-rules.html)
+
+**Hooks are _JavaScript functions_**, but they impose two additional rules
+
+- **Only call** Hooks at the **top level**. **Don’t call** Hooks inside **loops**, **conditions**, or **nested functions**.
+- **Only call** Hooks from **_React function components_** or custom hooks. **Don’t call** Hooks from **regular JavaScript functions**.
+
+
+```js
+const App = () => {
+  // these are ok
+  const [age, setAge] = useState(0)
+  const [name, setName] = useState('Juha Tauriainen')
+
+  // Conditiona Example: this does not work!
+  if ( age > 10 ) {
+    const [foobar, setFoobar] = useState(null)
+  }
+
+  // Loop Example: Not good
+  for ( let i = 0; i < age; i++ ) {
+    const [rightWay, setRightWay] = useState(false)
+  }
+
+  // Nested Function: this is also illegal
+  const notGood = () => {
+    const [x, setX] = useState(-1000)
+  }
+
+  return (
+    //...
+  )
+}
+```
+
 
 
 # Javascript for ReactJS
@@ -129,6 +176,14 @@ If there is no parameter required for a function, `()` is required.
 const multiply = (x*y) => { return x*y }
 const multiply = (x*y) =>  return x*y 
 ```
+
+### [Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
+The destructuring assignment syntax is a JavaScript expression that makes it possible to **unpack values** from **arrays**, or **properties from objects**, into **distinct variables**.
+
+#### [Array Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring)
+
+#### [Object Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)
 
 
 # References
