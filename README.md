@@ -92,7 +92,7 @@ class Welcome extends React.Component {
 
 ## [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 
-Before learning about hooks, make sure you understand the concept of [Destructing Assignment Syntax](destructuring_assignment)
+Before learning about hooks, make sure you understand the concept of [Destructing Assignment Syntax](#destructuring-assignment)
 
 - Hooks are a new addition in React **16.8**.
 - They let you use state and other React features without writing a class.
