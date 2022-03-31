@@ -68,9 +68,11 @@ const multiply = (x*y) =>  return x*y
 - [freeCodeCamp.org](https://www.youtube.com/c/Freecodecamp/search?query=reactjs)
 - [Coding Addict](https://www.youtube.com/codingaddict)
 
-### Arrow Functions
+### JS
 
 - [Arrow Functions](https://www.youtube.com/watch?v=22fyYvxz-do)
-
+- [Coding Addict | Javascript Fundamentals](https://www.youtube.com/watch?v=2Ji-clqUYnA)
+- [SFDCFacts Academy | Modern JS Crash Course | The Ultimate Hands-On JavaScript Tutorial 2021 | Learn JS in 3 hour](https://www.youtube.com/watch?v=dY8li4JnoWQ)
+ 
 
 
