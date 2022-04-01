@@ -18,7 +18,7 @@ npm start
 By default, the application runs in localhost port 3000 with the address http://localhost:3000.
 
 
-## React Component and Props
+## [React Component and Props](https://reactjs.org/docs/components-and-props.html)
 
 ### What's React Component
 
@@ -183,8 +183,141 @@ The destructuring assignment syntax is a JavaScript expression that makes it pos
 
 #### [Array Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring)
 
+- Imagine you have an array and you would like to assign each item from an array to local variables.
+
+- The destructuring assignment uses similar syntax, but on the **left-hand side of the assignment** to define what values to unpack from the sourced variable
+- In destructuring assignment, each index on the **left-hand side** correspond to respective index in an array on **right-hand side** of assignment.
+
+```js
+const [firstElement, secondElement] = list;
+// is equivalent to:
+// const firstElement = list[0];
+// const secondElement = list[1];
+
+```
+
+<img width="742" alt="Old vs New Way of Array Destructuring" src="https://user-images.githubusercontent.com/204423/161268094-b33f5e47-9383-4792-935b-b122b81f3b30.png">
+
+<img width="599" alt="Which variable will contain which value?" src="https://user-images.githubusercontent.com/204423/161268273-419e524a-8e2b-4dd4-b884-e9245aa2792f.png">
+
+#### Examples
+
+##### Basic variable assignment
+
+```js
+const x = [1, 2, 3, 4, 5];
+const [y, z] = x;
+console.log(y); // 1
+console.log(z); // 2
+```
+
+##### Assignment separate from declaration
+
+```js
+let a, b;
+
+[a, b] = [1, 2];
+console.log(a); // 1
+console.log(b); // 2
+```
+
+If an array have `N` elements and number of variables specified on the **left-hand side of the assignment is greater than N**, only the first N variables are assigned values.
+
+```js
+const foo = ['one', 'two'];
+
+const [red, yellow, green, blue] = foo;
+console.log(red); // "one"
+console.log(yellow); // "two"
+console.log(green); // undefined
+console.log(blue);  //undefined
+
+```
+
+##### Default values
+
+A variable can be assigned a default, in the case that the value unpacked from the array might be `undefined`.
+
+```js
+let a, b;
+
+[a=5, b=7] = [1];
+console.log(a); // 1
+console.log(b); // 7
+
+```
+
+##### Swapping variables
+
+```js
+let a = 1;
+let b = 3;
+
+[a, b] = [b, a];
+console.log(a); // 3
+console.log(b); // 1
+```
+
+##### Parsing an array returned from a function OR Parsing an array to a function. 
+
+Destructuring can make working with an array return from a function or passsing to a function more concise.
+
+```js
+function f() {
+  return [1, 2];
+}
+
+let a, b;
+[a, b] = f();
+console.log(a); // 1
+console.log(b); // 2
+```
+
+```js
+function f([a,b]) {
+  console.log(a); // 1
+  console.log(b); // 2
+}
+f([1,2]);
+```
+
+##### Ignoring some returned values
+
+You can ignore return values that you're not interested in.
+
+```js
+function f() {
+  return [1, 2, 3];
+}
+
+const [a, , b] = f();
+console.log(a); // 1
+console.log(b); // 3
+
+```
+
+You can also ignore all returned values.
+
+```js
+[,,] = f();
+```
+
+##### Assigning the rest of an array to a variable
+
+When destructuring an array, you can unpack and assign the remaining part of it to a variable using the rest pattern:
+
+```js
+const [a, ...b] = [1, 2, 3];
+console.log(a); // 1
+console.log(b); // [2, 3]
+```
+
+##### Unpacking values from a regular expression match
+
+
 #### [Object Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)
 
+### [Spread syntax (...)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 # References
 
@@ -198,7 +331,8 @@ The destructuring assignment syntax is a JavaScript expression that makes it pos
 
 ### JS
 
-- [Arrow Functions](https://www.youtube.com/watch?v=22fyYvxz-do)
+- [freeCodeCamp.org | Arrow Functions](https://www.youtube.com/watch?v=22fyYvxz-do)
+- [Fireship | JS Destructuring in 100 Seconds](https://www.youtube.com/watch?v=UgEaJBz3bjY)
 - [Coding Addict | Javascript Fundamentals](https://www.youtube.com/watch?v=2Ji-clqUYnA)
 - [SFDCFacts Academy | Modern JS Crash Course | The Ultimate Hands-On JavaScript Tutorial 2021 | Learn JS in 3 hour](https://www.youtube.com/watch?v=dY8li4JnoWQ)
  
