@@ -15,7 +15,14 @@ cd my-app
 npm start
 ```
 
-By default, the application runs in localhost port 3000 with the address http://localhost:3000.
+`npm start`
+- Runs the app in the development mode.
+- By default, the application runs in localhost port 3000 with the address http://localhost:3000.
+
+`npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
 
 ## [React Component and Props](https://reactjs.org/docs/components-and-props.html)
