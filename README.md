@@ -78,7 +78,7 @@ class Welcome extends React.Component {
 <Welcome onClick="" />
 ```
 
-4. Use `className` attribute instead of `class` for css classes.
+4. Use `className` attribute instead of `class` attribute for css classes.
 
 ```
 <Welcome className="" />
@@ -342,6 +342,7 @@ console.log(b); // [2, 3]
 - [Fireship | JS Destructuring in 100 Seconds](https://www.youtube.com/watch?v=UgEaJBz3bjY)
 - [Coding Addict | Javascript Fundamentals](https://www.youtube.com/watch?v=2Ji-clqUYnA)
 - [SFDCFacts Academy | Modern JS Crash Course | The Ultimate Hands-On JavaScript Tutorial 2021 | Learn JS in 3 hour](https://www.youtube.com/watch?v=dY8li4JnoWQ)
+- [Exploring ES6 | Book](https://exploringjs.com/es6.html)
  
 
 
