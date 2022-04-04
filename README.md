@@ -61,7 +61,7 @@ class Welcome extends React.Component {
 
 ### React Component Rules
 
-1. Component mames must start with a capital letter. 
+1. Component name must start with a capital letter. 
 > React treats components starting with lowercase letters as DOM tags. For example, `<div />` represents an HTML div tag, but `<Welcome />` represents a component
 
 2. Always close the tag for React components e.g;
