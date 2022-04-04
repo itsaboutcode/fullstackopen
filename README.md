@@ -324,6 +324,75 @@ console.log(b); // [2, 3]
 
 #### [Object Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)
 
+##### Basic assignment
+
+```
+const user = {
+    id: 42,
+    isVerified: true
+};
+
+const {id, isVerified} = user;
+
+console.log(id); // 42
+console.log(isVerified); // true
+
+```
+
+##### Assignment separate from declaration
+
+```
+let a, b;
+
+({a, b} = {a: 1, b: 2});
+
+```
+
+> The parentheses ( ... ) around the assignment statement are required when using object literal destructuring assignment without a declaration.
+
+
+##### Assigning to new variable names
+
+```
+const o = {p: 42, q: true};
+const {p: foo, q: bar} = o;
+
+console.log(foo); // 42
+console.log(bar); // true
+
+```
+
+`const {p: foo} = o` takes from the object `o` the property named `p` and assigns it to a local variable named `foo`.
+
+##### Default values
+
+A variable can be assigned a default, in the case that the value unpacked from the object is `undefined`.
+
+```
+const {a = 10, b = 5} = {a: 3};
+
+console.log(a); // 3
+console.log(b); // 5
+```
+
+##### Assigning to new variable names and providing default values
+
+##### Unpacking properties from objects passed as a function parameter
+
+##### Setting a function parameter's default value
+
+##### Nested object and array destructuring
+
+##### Computed object property names and destructuring
+
+##### Rest in Object Destructuring
+
+##### Invalid JavaScript identifier as a property name
+
+##### Combined Array and Object Destructuring
+
+##### The prototype chain is looked up when the object is deconstructed
+
 ### [Spread syntax (...)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 # References
