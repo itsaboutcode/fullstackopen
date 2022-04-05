@@ -97,6 +97,50 @@ class Welcome extends React.Component {
 
 ### Render Dynamic Content Inside Component
 
+### [Event Handling](https://reactjs.org/docs/handling-events.html)
+
+Event handling of **React Elements** is same as DOM elements with following syntax differences.
+
+1. React events are named using **camelCase**, rather than lowercase.
+2. With JSX, you pass a function as the **event handler**, rather than a string.
+
+###### HTML Example
+
+```
+<button onclick="activateLasers()">
+  Activate Lasers
+</button>
+```
+
+###### React Example
+
+
+```
+<button onClick={activateLasers}>
+  Activate Lasers
+</button>
+```
+
+Other differences are
+
+- An event handler is supposed to be **either a function** or a **function reference**.
+
+```
+<button onClick={activateLasers}>
+  Activate Lasers
+</button>
+
+<button onClick={() => { console.log('Hello World') }}>
+  Activate Lasers
+</button>
+
+```
+
+- You cannot return false to prevent default behavior in React. You must call preventDefault explicitly.
+
+
+### [Forms](https://reactjs.org/docs/forms.html)
+
 ## [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 
 Before learning about hooks, make sure you understand the concept of [Destructing Assignment Syntax](#destructuring-assignment)
