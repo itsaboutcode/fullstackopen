@@ -439,6 +439,90 @@ console.log(b); // 5
 
 ### [Spread syntax (...)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
+### [ES/JS Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+
+
+
+#### Exporting Module Feature
+
+- You can export functions, var, let, const and classes.
+- You put `export` keyword before the functions, var, let, const and classes.
+-  you can't use export inside a function.
+-  A more convenient way of exporting all the items you want to export is to use a **single export statement** at the **end of your module file**, followed by a comma-separated list of the features you want to export wrapped in curly braces
+
+```js
+export const name = 'square'; // Constant
+
+export function draw() {} // Function
+
+export { name, draw, reportArea, reportPerimeter }; // more convenient syntax at the end of file
+
+```
+
+- Above method of exporting is called **named exports.**
+- We have another method of exporting, called **default export** and below is the example syntax. Note the **lack of curly braces**.
+- **Only one default export** allowed per module.
+
+```js
+export default randomSquare;
+export default function(ctx) { }
+
+```
+
+
+#### Importing Module Feature
+
+- Once you've exported some features out of your module, you need to import them where you wanted to use them.
+- You cannot change the variable that was imported, but you can still modify properties similar to `const`.
+
+**Syntax**: You use the `import` statement, followed by a `comma-separated list` of the features you want to import wrapped in `curly braces`, followed by the keyword `from`, followed by the `path to the module file`.
+
+```js
+import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
+
+```
+
+- Importing **default export** modules syntax.
+- Note the **lack of curly braces**. This is because there is **only one default export** allowed per module.
+
+```js
+import randomSquare from './modules/square.js';
+import {default as randomSquare} from './modules/square.js';   // expanded version of above line
+```
+
+#### Renaming imports and exports
+
+- Inside your import and export statement's curly braces, you can use the keyword `as` along with a new feature name, to change the identifying name you will use for a feature inside the top-level module.
+- You need this feature because it's possible that more than 1 module export with the same name.
+- Since you can't change the module of third-party, it's generally good idea not to change name of your own modules too and change names at import side.
+
+##### Export Example
+
+```js
+// inside module.js
+export {
+  function1 as newFunctionName,
+  function2 as anotherNewFunctionName
+};
+
+// inside main.js
+import { newFunctionName, anotherNewFunctionName } from './modules/module.js';
+
+```
+
+##### Import Example
+
+```js
+// inside module.js
+export { function1, function2 };
+
+// inside main.js
+import { function1 as newFunctionName,
+         function2 as anotherNewFunctionName } from './modules/module.js';
+
+```
+
+
 # References
 
 ### ReactJS
