@@ -441,6 +441,9 @@ console.log(b); // 5
 
 ### [ES/JS Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
+- In programming, you try to breakdown your problems in small chunks and spread it over multiple files so that you can share it across projects and within project.
+- In js, when you create a file, it's called a `module.`
+- To use functions, classes, variables, constants in other files, you need to know how to export them so that other modules can import it and use them.
 
 
 #### Exporting Module Feature
@@ -474,8 +477,7 @@ export default function(ctx) { }
 
 - Once you've exported some features out of your module, you need to import them where you wanted to use them.
 - You cannot change the variable that was imported, but you can still modify properties similar to `const`.
-
-**Syntax**: You use the `import` statement, followed by a `comma-separated list` of the features you want to import wrapped in `curly braces`, followed by the keyword `from`, followed by the `path to the module file`.
+- To import, you use the `import` statement, followed by a `comma-separated list` of the features you want to import wrapped in `curly braces`, followed by the keyword `from`, followed by the `path to the module file`.
 
 ```js
 import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
@@ -519,6 +521,52 @@ export { function1, function2 };
 // inside main.js
 import { function1 as newFunctionName,
          function2 as anotherNewFunctionName } from './modules/module.js';
+
+```
+
+#### Creating a module object
+
+- So far, when we import from a module, we import individual items from a module and use them e.g;
+
+```js
+import { name, draw, reportArea, reportPerimeter } from './canvas.js';
+
+name();
+
+```
+- Instead of importing all of them individually, you can import all of them in an `object` and then use feature of a module as functions or variables of a given object.
+
+```js
+import * as Canvas from './canvas.js';
+Canvas.name()
+```
+
+### Exporting Classes From a Module
+
+##### Class Export Syntax
+
+```js
+
+class Square {
+  constructor(ctx, listId, length, x, y, color) { }
+
+  draw() { }
+  
+}
+
+export { Square };
+
+```
+
+##### Class import and usage syntax
+
+```js
+import { Square } from './square.js';
+
+let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+square1.draw();
+square1.reportArea();
+square1.reportPerimeter();
 
 ```
 
