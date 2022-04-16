@@ -437,7 +437,61 @@ console.log(b); // 5
 
 ##### The prototype chain is looked up when the object is deconstructed
 
-### [Spread syntax (...)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+### [Spread Operator Syntax (...)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+The JavaScript spread operator `(...)` allows us to quickly `copy all or part` of an existing `array or object` into another array or object.
+
+```js
+const numbersOne = [1, 2, 3];
+const numbersTwo = [4, 5, 6];
+const numbersCombined = [...numbersOne, ...numbersTwo];
+
+// Output = [1,2,3,4,5,6]
+
+```
+
+The spread operator is often used in combination with `destructuring`.
+
+```js
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const [one, two, ...rest] = numbers;
+
+// one = 1
+// two = 2
+// rest = 3,4,5,6
+```
+
+We can use the spread operator with objects too. Below is example on how we can combine 2 objects.
+
+```js
+const myVehicle = {
+  brand: 'Ford',
+  model: 'Mustang',
+  color: 'red'
+}
+
+const updateMyVehicle = {
+  type: 'car',
+  year: 2021, 
+  color: 'yellow'
+}
+
+const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
+
+// Output object will be like this
+
+{
+  brand: 'Ford',
+  model: 'Mustang',
+  color: 'yellow',
+  type: 'car',
+  year: 2021, 
+}
+
+```
+
+
 
 ### [ES/JS Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
@@ -580,6 +634,7 @@ square1.reportPerimeter();
 - [Clever Programmer](https://www.youtube.com/c/CleverProgrammer)
 - [freeCodeCamp.org](https://www.youtube.com/c/Freecodecamp/search?query=reactjs)
 - [Coding Addict](https://www.youtube.com/codingaddict)
+- [w3schools | Reactjs](https://www.w3schools.com/react/default.asp)
 
 ### JS
 
