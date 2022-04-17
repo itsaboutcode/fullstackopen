@@ -15,14 +15,19 @@ cd my-app
 npm start
 ```
 
+##### Starting app locally
+
 `npm start`
+
 - Runs the app in the development mode.
 - By default, the application runs in localhost port 3000 with the address http://localhost:3000.
 
+##### Building app for production
+
 `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Builds the app for production to the `build` folder.
+- It correctly bundles React in production mode and optimizes the build for the best performance.
 
 
 ## [React Component and Props](https://reactjs.org/docs/components-and-props.html)
@@ -31,11 +36,11 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 - Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. 
 - Components are like JavaScript functions.
-- They accept arbitrary inputs (called “**props**”) and return React elements describing what should appear on the screen.
+- They accept arbitrary inputs (called **props**) and return React elements describing what should appear on the screen.
 
-### Creating React Component
+### Creating React Functional Component
 
-- We call such components **“function components”** because they are literally JavaScript functions.
+- We call such components **function components** because they are literally JavaScript functions.
 
 ```js
 function Welcome(props) {
@@ -49,7 +54,7 @@ function Welcome(props) {
 const Welcome = props => <h1>Hello, {props.name}</h1>
 ```
 
-**[ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) class Syntax**
+**[ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) Class Syntax**
 
 ```js
 class Welcome extends React.Component {
@@ -78,7 +83,7 @@ class Welcome extends React.Component {
 <Welcome onClick="" />
 ```
 
-4. Use `className` attribute instead of `class` attribute for css classes.
+4. Use `className` attribute instead of `class` attribute for css class selector.
 
 ```
 <Welcome className="" />
@@ -136,7 +141,7 @@ Other differences are
 
 ```
 
-- You cannot return false to prevent default behavior in React. You must call preventDefault explicitly.
+- You cannot return false to prevent default behavior in React. You must call `preventDefault` explicitly.
 
 
 ### [Forms](https://reactjs.org/docs/forms.html)
@@ -147,8 +152,7 @@ Before learning about hooks, make sure you understand the concept of [Destructin
 
 - Hooks are a new addition in React **16.8**.
 - They let you use state and other React features without writing a class.
-- Hooks are functions that let you **“hook into”** React **state** and **lifecycle** features from function components.
-
+- Hooks are functions that let you **hook into** React **state** and **lifecycle** features from function components.
 - React provides a few built-in Hooks like **useState**. 
 - You can also create your own Hooks to reuse stateful behavior between different components.
 
