@@ -1,3 +1,64 @@
+- [ReactJS](#reactjs)
+  - [What's ReactJS](#whats-reactjs)
+  - [Creating ReactJS Project](#creating-reactjs-project)
+        - [Run the App in Developement Mode](#run-the-app-in-developement-mode)
+        - [Building app for production](#building-app-for-production)
+  - [React Component and Props](#react-component-and-props)
+    - [What's React Component](#whats-react-component)
+    - [Creating React Functional Component](#creating-react-functional-component)
+    - [React Component Rules](#react-component-rules)
+    - [Stateless Functional Components](#stateless-functional-components)
+    - [Stateful Components](#stateful-components)
+    - [JSX](#jsx)
+    - [Render Dynamic Content Inside Component](#render-dynamic-content-inside-component)
+    - [Event Handling](#event-handling)
+          - [HTML Example](#html-example)
+          - [React Example](#react-example)
+    - [Forms](#forms)
+  - [React Hooks](#react-hooks)
+    - [Rules of Hooks](#rules-of-hooks)
+- [Javascript for ReactJS](#javascript-for-reactjs)
+    - [Arrow Function](#arrow-function)
+    - [Destructuring Assignment](#destructuring-assignment)
+      - [Array Destructuring](#array-destructuring)
+      - [Examples](#examples)
+        - [Basic variable assignment](#basic-variable-assignment)
+        - [Assignment separate from declaration](#assignment-separate-from-declaration)
+        - [Default values](#default-values)
+        - [Swapping variables](#swapping-variables)
+        - [Parsing an array returned from a function OR Parsing an array to a function.](#parsing-an-array-returned-from-a-function-or-parsing-an-array-to-a-function)
+        - [Ignoring some returned values](#ignoring-some-returned-values)
+        - [Assigning the rest of an array to a variable](#assigning-the-rest-of-an-array-to-a-variable)
+        - [Unpacking values from a regular expression match](#unpacking-values-from-a-regular-expression-match)
+      - [Object Destructuring](#object-destructuring)
+        - [Basic assignment](#basic-assignment)
+        - [Assignment separate from declaration](#assignment-separate-from-declaration-1)
+        - [Assigning to new variable names](#assigning-to-new-variable-names)
+        - [Default values](#default-values-1)
+        - [Assigning to new variable names and providing default values](#assigning-to-new-variable-names-and-providing-default-values)
+        - [Unpacking properties from objects passed as a function parameter](#unpacking-properties-from-objects-passed-as-a-function-parameter)
+        - [Setting a function parameter's default value](#setting-a-function-parameters-default-value)
+        - [Nested object and array destructuring](#nested-object-and-array-destructuring)
+        - [Computed object property names and destructuring](#computed-object-property-names-and-destructuring)
+        - [Rest in Object Destructuring](#rest-in-object-destructuring)
+        - [Invalid JavaScript identifier as a property name](#invalid-javascript-identifier-as-a-property-name)
+        - [Combined Array and Object Destructuring](#combined-array-and-object-destructuring)
+        - [The prototype chain is looked up when the object is deconstructed](#the-prototype-chain-is-looked-up-when-the-object-is-deconstructed)
+    - [Spread Operator Syntax (...)](#spread-operator-syntax-)
+    - [ES/JS Modules](#esjs-modules)
+      - [Exporting Module Feature](#exporting-module-feature)
+      - [Importing Module Feature](#importing-module-feature)
+      - [Renaming imports and exports](#renaming-imports-and-exports)
+        - [Export Example](#export-example)
+        - [Import Example](#import-example)
+      - [Creating a module object](#creating-a-module-object)
+    - [Exporting Classes From a Module](#exporting-classes-from-a-module)
+        - [Class Export Syntax](#class-export-syntax)
+        - [Class import and usage syntax](#class-import-and-usage-syntax)
+- [References](#references)
+    - [ReactJS](#reactjs-1)
+    - [JS](#js)
+
 # [ReactJS](https://reactjs.org/)
 
 ## What's ReactJS
@@ -15,17 +76,20 @@ cd my-app
 npm start
 ```
 
-##### Starting app locally
+##### Run the App in Developement Mode
 
-`npm start`
+```js
+npm start
+```
 
 - Runs the app in the development mode.
 - By default, the application runs in localhost port 3000 with the address http://localhost:3000.
 
 ##### Building app for production
 
-`npm run build`
-
+```js
+npm run build
+```
 - Builds the app for production to the `build` folder.
 - It correctly bundles React in production mode and optimizes the build for the best performance.
 
