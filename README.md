@@ -45,6 +45,9 @@
         - [Combined Array and Object Destructuring](#combined-array-and-object-destructuring)
         - [The prototype chain is looked up when the object is deconstructed](#the-prototype-chain-is-looked-up-when-the-object-is-deconstructed)
     - [Spread Operator Syntax (...)](#spread-operator-syntax-)
+    - [Classes](#classes)
+      - [Class Declarations Syntax](#class-declarations-syntax)
+      - [Class Expressions Syntax](#class-expressions-syntax)
     - [ES/JS Modules](#esjs-modules)
       - [Exporting Module Feature](#exporting-module-feature)
       - [Importing Module Feature](#importing-module-feature)
@@ -559,6 +562,47 @@ const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
 
 ```
 
+### Classes
+
+#### Class Declarations Syntax
+
+- To declare a class, you use the `class` keyword with the name of the class.
+
+```js
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+
+```
+
+#### Class Expressions Syntax
+
+```js
+// unnamed
+let Rectangle = class {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+};
+console.log(Rectangle.name);
+// output: "Rectangle"
+
+// named
+let Rectangle = class Rectangle2 {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+};
+console.log(Rectangle.name);
+// output: "Rectangle2"
+
+```
+
 
 
 ### [ES/JS Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
@@ -711,6 +755,7 @@ square1.reportPerimeter();
 - [Coding Addict | Javascript Fundamentals](https://www.youtube.com/watch?v=2Ji-clqUYnA)
 - [SFDCFacts Academy | Modern JS Crash Course | The Ultimate Hands-On JavaScript Tutorial 2021 | Learn JS in 3 hour](https://www.youtube.com/watch?v=dY8li4JnoWQ)
 - [Exploring ES6 | Book](https://exploringjs.com/es6.html)
- 
+- [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
+- [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
 
