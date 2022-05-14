@@ -144,13 +144,13 @@ class Welcome extends React.Component {
 
 ```
 
-3. Use `camelCase` for html attributes.
+3. Use `camelCase` for HTML attributes.
 
 ```
 <Welcome onClick="" />
 ```
 
-4. Use `className` attribute instead of `class` attribute for css class selector.
+4. Use `className` attribute instead of `class` attribute for CSS class selector.
 
 ```
 <Welcome className="" />
@@ -171,7 +171,7 @@ class Welcome extends React.Component {
 
 ### [Event Handling](https://reactjs.org/docs/handling-events.html)
 
-Event handling of **React Elements** is same as DOM elements with following syntax differences.
+Event handling of **React Elements** is the same as DOM elements with following syntax differences.
 
 1. React events are named using **camelCase**, rather than lowercase.
 2. With JSX, you pass a function as the **event handler**, rather than a string.
@@ -265,9 +265,11 @@ const App = () => {
 
 ### Arrow Function
 
-- It has a shorter syntax than standard function.
+- It has a shorter syntax than the standard function.
+
 - It does not bind their own `this`.
-- Arrow functions are best suited for non-method function.
+
+- Arrow functions are best suited for non-method functions.
 
 **Example Syntax**
 
@@ -275,7 +277,7 @@ const App = () => {
 (param1, param2) => { statements }
 ```
 
-If function have only one param, you can emit the `()` around the paramters and if it has only one statment in the method, you can emit `{}` in method body. And when you don't put `{}` brances, it will return that expression result.
+If the function has only one param, you can emit the `()` around the paramters and if it has only one statment in the method, you can emit `{}` in method body. And when you don't put `{}` brances, it will return that expression result.
 
 ```
 param => statment
@@ -307,8 +309,9 @@ The destructuring assignment syntax is a JavaScript expression that makes it pos
 
 - Imagine you have an array and you would like to assign each item from an array to local variables.
 
-- The destructuring assignment uses similar syntax, but on the **left-hand side of the assignment** to define what values to unpack from the sourced variable
-- In destructuring assignment, each index on the **left-hand side** correspond to respective index in an array on **right-hand side** of assignment.
+- The destructuring assignment uses similar syntax, but on the **left-hand side of the assignment** to define what values to unpack from the sourced variable.
+  
+- In the destructuring assignment, each index on the **left-hand side** correspond to respective index in an array on **right-hand side** of assignment.
 
 ```js
 const [firstElement, secondElement] = list;
@@ -343,7 +346,7 @@ console.log(a); // 1
 console.log(b); // 2
 ```
 
-If an array have `N` elements and number of variables specified on the **left-hand side of the assignment is greater than N**, only the first N variables are assigned values.
+If an array has `N` elements and the number of variables specified on the **left-hand side of the assignment is greater than N**, only the first N variables are assigned values.
 
 ```js
 const foo = ['one', 'two'];
@@ -533,7 +536,7 @@ const [one, two, ...rest] = numbers;
 // rest = 3,4,5,6
 ```
 
-We can use the spread operator with objects too. Below is example on how we can combine 2 objects.
+We can use the spread operator with objects too. Below is an example of how we can combine 2 objects.
 
 ```js
 const myVehicle = {
@@ -607,16 +610,21 @@ console.log(Rectangle.name);
 
 ### [ES/JS Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
-- In programming, you try to breakdown your problems in small chunks and spread it over multiple files so that you can share it across projects and within project.
+- In programming, you try to break down your problems into small chunks and spread them over multiple files so that you can share them across projects and within projects.
+  
 - In js, when you create a file, it's called a `module.`
-- To use functions, classes, variables, constants in other files, you need to know how to export them so that other modules can import it and use them.
+  
+- To use functions, classes, variables, and constants in other files, you need to know how to export them so that other modules can import them and use them.
 
 
 #### Exporting Module Feature
 
-- You can export functions, var, let, const and classes.
-- You put `export` keyword before the functions, var, let, const and classes.
--  you can't use export inside a function.
+- You can export functions, var, let, const, and classes.
+  
+- You put the `export` keyword before the functions, var, let, const and classes.
+  
+- You can't use export inside a function.
+  
 -  A more convenient way of exporting all the items you want to export is to use a **single export statement** at the **end of your module file**, followed by a comma-separated list of the features you want to export wrapped in curly braces
 
 ```js
@@ -629,7 +637,9 @@ export { name, draw, reportArea, reportPerimeter }; // more convenient syntax at
 ```
 
 - Above method of exporting is called **named exports.**
+  
 - We have another method of exporting, called **default export** and below is the example syntax. Note the **lack of curly braces**.
+  
 - **Only one default export** allowed per module.
 
 ```js
@@ -642,7 +652,9 @@ export default function(ctx) { }
 #### Importing Module Feature
 
 - Once you've exported some features out of your module, you need to import them where you wanted to use them.
+  
 - You cannot change the variable that was imported, but you can still modify properties similar to `const`.
+
 - To import, you use the `import` statement, followed by a `comma-separated list` of the features you want to import wrapped in `curly braces`, followed by the keyword `from`, followed by the `path to the module file`.
 
 ```js
@@ -651,6 +663,7 @@ import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
 ```
 
 - Importing **default export** modules syntax.
+
 - Note the **lack of curly braces**. This is because there is **only one default export** allowed per module.
 
 ```js
@@ -661,9 +674,10 @@ import {default as randomSquare} from './modules/square.js';   // expanded versi
 #### Renaming imports and exports
 
 - Inside your import and export statement's curly braces, you can use the keyword `as` along with a new feature name, to change the identifying name you will use for a feature inside the top-level module.
-- You need this feature because it's possible that more than 1 module export with the same name.
-- Since you can't change the module of third-party, it's generally good idea not to change name of your own modules too and change names at import side.
 
+- You need this feature because it's possible that more than 1 module exported with the same name.
+
+- Since you can't change the module of the third party, it's generally a good idea not to change the name of your own modules too and change names on the import side.
 ##### Export Example
 
 ```js
