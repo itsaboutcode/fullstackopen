@@ -761,6 +761,7 @@ square1.reportPerimeter();
 - [freeCodeCamp.org](https://www.youtube.com/c/Freecodecamp/search?query=reactjs)
 - [Coding Addict](https://www.youtube.com/codingaddict)
 - [w3schools | Reactjs](https://www.w3schools.com/react/default.asp)
+- [JavaScriptMastery](https://www.youtube.com/c/JavaScriptMastery)
 
 ### JS
 
